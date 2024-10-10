@@ -1,70 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <nav id="navbar">
-      <div><span>OGGY</span> Architects</div>
-      <ul>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+<body class="text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-lg font-bold">
+                    <a href="#home" class="text-gray-800 hover:text-gray-600">Oggy Architects</a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#projects" class="text-gray-600 hover:text-gray-800">Projects</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-800">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-800">Contact</a>
+                </div>
+            </div>
+        </div>
     </nav>
-  </header>
-  <main>
-    <section id="hero">
-      <div><span>OGGY</span>Architects</div>
-    </section>
 
-    <section id="projects">
-      <h4>Projects</h4>
-      <hr>
-      <div id="projectContainer">
-        <div class="project-card">
-          <p>interior</p>
-          <img src="img1.jpg" alt="">
+    <!-- Header -->
+    <header id="home" class="relative bg-cover bg-center h-screen" style="background-image: url('front.jpg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center text-white">
+            <div>
+                <h1 class="text-5xl font-bold"><span class="bg-black bg-opacity-75 p-2">Oggy</span> Architects</h1>
+            </div>
         </div>
-        <div class="project-card">
-          <p>Renovated</p>
-          <img src="img2.webp" alt="">
-        </div>
-        <div class="project-card">
-          <p>CCTV</p>
-          <img src="img3.jpeg" alt="">
-        </div>
-        <div class="project-card">
-          <p>extra facility</p>
-          <img src="img4.webp" alt="">
-        </div>
-        <div class="project-card">
-          <p>rooms</p>
-          <img src="room.jpg" alt="">
-        </div>
-        <div class="project-card">
-          <p>society</p>
-          <img src="society.jpeg" alt="">
-        </div>
-        <div class="project-card">
-          <p>Paintings</p>
-          <img src="paint.jpg" alt="">
-        </div>
-        <div class="project-card">
-          <p>Friendly naighbours</p>
-          <img src="bob.webp" alt="">
-        </div>
-      </div>
-    </section>
+    </header>
 
-  </main>
-  <footer></footer>
+    <!-- Page content -->
+    <main class="max-w-7xl mx-auto p-6">
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12">
+            <h2 class="text-3xl font-bold border-b-2 border-gray-300 pb-2 mb-8">Projects</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="relative group">
+                    <img src="img4.webp" alt="Summer House" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-semibold">Summer House</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="img1.jpg" alt="Brick House" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-semibold">Brick House</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="paint.jpg" alt="Renovated" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-semibold">Renovated</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="room.jpg" alt="Barn House" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white text-lg font-semibold">Barn House</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-12 bg-gray-50">
+            <h2 class="text-3xl font-bold border-b-2 border-gray-300 pb-2 mb-8">About</h2>
+            <p class="text-gray-600 leading-loose mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <img src="jack.webp" alt="jack" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">jack</h3>
+                    <p class="text-gray-600">oggy ka bhai</p>
+                    <p class="text-gray-600 mt-2">Papa hu papa, iss duniya ka papa</p>
+                    <button class="mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded">Contact</button>
+                </div>
+                <div class="text-center">
+                    <img src="oggy.jpg" alt="Jane" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">Oggy</h3>
+                    <p class="text-gray-600">main</p>
+                    <p class="text-gray-600 mt-2">Hmmm Bhaiya</p>
+                    <button class="mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded">Contact</button>
+                </div>
+                <div class="text-center">
+                    <img src="olii.webp" alt="Mike" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">Mike Ross</h3>
+                    <p class="text-gray-600">Oggy friend</p>
+                    <p class="text-gray-600 mt-2"></p>
+                    <button class="mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded">Contact</button>
+                </div>
+                <div class="text-center">
+                    <img src="boob.webp" alt="Dan" class="w-32 h-32 mx-auto rounded-full shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">Bob</h3>
+                    <p class="text-gray-600">Friendly Neighbour</p>
+                    <p class="text-gray-600 mt-2">Dhakkichikki Dhakkichikki Oww!</p>
+                    <button class="mt-4 bg-gray-200 text-gray-700 py-2 px-4 rounded">Contact</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12">
+            <h2 class="text-3xl font-bold border-b-2 border-gray-300 pb-2 mb-8">Contact</h2>
+            <p class="text-gray-600 mb-8">Let's get in touch and talk about your next project.</p>
+            <form action="/action_page.php" target="_blank" class="space-y-4">
+                <input type="text" placeholder="Name" required name="Name" class="w-full p-2 border border-gray-300 rounded">
+                <input type="email" placeholder="Email" required name="Email" class="w-full p-2 border border-gray-300 rounded">
+                <input type="text" placeholder="Subject" required name="Subject" class="w-full p-2 border border-gray-300 rounded">
+                <textarea placeholder="Comment" required name="Comment" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                <button type="submit" class="w-full py-2 bg-black text-white rounded">SEND MESSAGE</button>
+            </form>
+        </section>
+
+        <!-- Map Section -->
+        <section class="py-12">
+            <img src="society.jpeg" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-4">
+        <p>Devloped by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="text-green-500 hover:underline"></a>Cockroaches</p>
+    </footer>
+
 </body>
 </html>
